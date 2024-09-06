@@ -39,7 +39,7 @@ struct LoginView: View {
                     .padding()
                 }
                 .padding(.horizontal, 16)
-                .padding(.top, -50)
+                .offset(y: -50)
                 VStack {
                     Text("New around here!")
                     NavigationLink(destination: RegisterView()) {

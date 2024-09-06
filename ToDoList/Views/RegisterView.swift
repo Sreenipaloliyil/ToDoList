@@ -41,7 +41,7 @@ struct RegisterView: View {
                 
             }
             .padding(.horizontal, 16)
-            .padding(.top, -100)
+            .offset(y: -100)
                 
         }
     }
