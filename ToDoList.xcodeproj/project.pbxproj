@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90928C762C8AC98E00A25BDD /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90928C752C8AC98E00A25BDD /* TLButton.swift */; };
+		90928C782C8ACD3500A25BDD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90928C772C8ACD3500A25BDD /* LoginViewModel.swift */; };
 		90B2D7C92C7845410037F2F1 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2D7C82C7845410037F2F1 /* ToDoListApp.swift */; };
 		90B2D7CB2C7845410037F2F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2D7CA2C7845410037F2F1 /* ContentView.swift */; };
 		90B2D7CD2C7845420037F2F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B2D7CC2C7845420037F2F1 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90928C752C8AC98E00A25BDD /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		90928C772C8ACD3500A25BDD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		90B2D7C52C7845410037F2F1 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B2D7C82C7845410037F2F1 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		90B2D7CA2C7845410037F2F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				90B2D7FF2C784F020037F2F1 /* LoginView.swift */,
 				90B2D8032C7AE4940037F2F1 /* HeaderView.swift */,
 				90B2D8052C7AEA600037F2F1 /* RegisterView.swift */,
+				90928C752C8AC98E00A25BDD /* TLButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 		90B2D7FC2C784E410037F2F1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				90928C772C8ACD3500A25BDD /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,10 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B2D8002C784F020037F2F1 /* LoginView.swift in Sources */,
+				90928C762C8AC98E00A25BDD /* TLButton.swift in Sources */,
 				90B2D8062C7AEA600037F2F1 /* RegisterView.swift in Sources */,
 				90B2D7CB2C7845410037F2F1 /* ContentView.swift in Sources */,
 				90B2D7C92C7845410037F2F1 /* ToDoListApp.swift in Sources */,
 				90B2D8042C7AE4950037F2F1 /* HeaderView.swift in Sources */,
+				90928C782C8ACD3500A25BDD /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
