@@ -7,22 +7,41 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAuth
 
 
 class LoginViewModel: ObservableObject {
-    @Published var userName: String = ""
+    
+    @Published var email: String = ""
     @Published var password: String = ""
+    @Published var errorMessage: String = ""
     
     init() {
         
     }
     
-    func login() {
+    func login()  {
+        guard validate() else {
+            return
+        }
+
+        
         
     }
     
-    func validate() {
+    func validate() -> Bool {
+        errorMessage = ""
+        guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
+              !password.trimmingCharacters(in: .whitespaces).isEmpty else {
+            errorMessage = "Please input all fields!"
+            return false
+        }
         
+        guard email.contains("@"), email.contains(".") else {
+            errorMessage = "Invalid email!"
+            return false
+        }
+        return true
     }
     
 

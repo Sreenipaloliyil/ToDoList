@@ -10,6 +10,7 @@ import SwiftUI
 struct RegisterView: View {
     
     
+    @StateObject var viewModel = RegisterViewModel()
     @State var name: String = ""
     @State var email: String = ""
     @State var password: String = ""
@@ -21,17 +22,19 @@ struct RegisterView: View {
                        angle: -15,
                        background: Color.orange)
             Form {
-                TextField("Your name", text: $name)
+                TextField("Your name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
-                TextField("Your Email", text: $email)
+                TextField("Your Email", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
-                SecureField("Create Password", text: $password)
+                SecureField("Create Password", text: $viewModel.password)
                 TLButton(title: "Register", background: .green, action: {
                     //Register clicked
-                })    
+                    viewModel.register()
+                
+                })
                 .padding()
         
             }
