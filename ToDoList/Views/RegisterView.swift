@@ -11,9 +11,9 @@ struct RegisterView: View {
     
     
     @StateObject var viewModel = RegisterViewModel()
-    @State var name: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
+//    @State var name: String = ""
+//    @State var email: String = ""
+//    @State var password: String = ""
 
     var body: some View {
         VStack {
@@ -22,6 +22,10 @@ struct RegisterView: View {
                        angle: -15,
                        background: Color.orange)
             Form {
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundStyle(.red)
+                }
                 TextField("Your name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
@@ -46,5 +50,5 @@ struct RegisterView: View {
 }
 
 #Preview {
-    RegisterView(name: "", email: "", password: "")
+    RegisterView()
 }

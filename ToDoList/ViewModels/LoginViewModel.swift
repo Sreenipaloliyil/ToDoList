@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 
 class LoginViewModel: ObservableObject {
@@ -24,9 +25,8 @@ class LoginViewModel: ObservableObject {
         guard validate() else {
             return
         }
-
-        
-        
+        //Validation success -> Sign In
+        Auth.auth().signIn(withEmail: email, password: password)
     }
     
     func validate() -> Bool {

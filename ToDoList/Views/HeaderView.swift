@@ -16,7 +16,7 @@ struct HeaderView: View {
     
     var body: some View {
         ZStack(content: {
-            RoundedRectangle(cornerRadius: 0)
+            Rectangle()
                 .foregroundColor(background)
                 .rotationEffect(.degrees(angle))
             VStack(alignment: .center, content: {

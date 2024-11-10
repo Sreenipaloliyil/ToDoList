@@ -21,13 +21,20 @@ struct LoginView: View {
                            subtitle: "Get things done",
                            angle: 15,
                            background: Color.pink)
+
+                
                 Form {
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(.red)
+                    }
+                    
                     TextField("User name", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     TextField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
-                    TLButton(title: "Log In", background: .blue, action: {
+                    TLButton(title: "Log In", action: {
                         //Log In clicked
                         Task {
                             do {

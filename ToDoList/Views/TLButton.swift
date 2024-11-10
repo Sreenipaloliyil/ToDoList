@@ -10,7 +10,7 @@ import SwiftUI
 struct TLButton: View {
     
     var title: String
-    var background: Color
+    var background: Color = .blue
     var action: () -> Void
     
     var body: some View {
